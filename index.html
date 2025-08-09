@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <!-- CSS Sheet -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smythe&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-text">
+            <h1>Hannes's Diner</h1>
+            <p>The best burgers and pizzas in town.</p>
+        </div>
+    </header>
+    <section class="product" id="product-menu"></section>
+    <section class="orders hidden" id="orders">
+        <h2>Your order</h2>
+        <div id="order-items"></div>
+        <div class="total-cost">
+            <h3>Total cost</h3>
+            <p id="total-price"></p>
+        </div>
+        <button class="complete-order-btn" id="complete-order-btn">Complete order</button>
+    </section>
+    <section class="thank-you-modal hidden" id="thank-you-modal">
+        <div class="thanks-message-container" id="thanks-message-container"></div>
+    </section>
+    <section class="payment-modal hidden" id="payment-modal">
+        <form id="card-details">
+            <div class="form-container">
+                <h2 class="form-header">Enter card details</h2>
+                <div class="modal-content">
+                    <input type="text" id="form-name" name="username" aria-label="input for your name" placeholder="Enter your name">
+                    <input type="text" inputmode="numeric" pattern="[0-9]{16}" id="form-card-number" name="user-card-number" aria-label="input for card number" placeholder="Enter your card number">
+                    <input type="text" inputmode="numeric" maxlength="4" id="form-cvv" name="user-cvv" aria-label="input for card CVV" placeholder="Enter CVV">
+                    <button type="submit" class="submit-btn" id="submit-btn">Pay</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
